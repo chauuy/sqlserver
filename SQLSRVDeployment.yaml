@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mssql2019-deployment
+  namespace: mssql
+#--Ajouter une App OpenShift et pas seulement un Deployment
+  labels:
+    app: mssql
+    app.kubernetes.io/name: mssql
+    app.kubernetes.io/part-of: mysqlserver
+#--
+spec:
+  selector:
+    matchLabels:
+      app: mssql2019
+      version: v15.0
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mssql2019
+        version: v15.0
+    spec:
+      containers:
+        - name: sqlserver-container
+          image: "mcr.microsoft.com/mssql/server:2019-latest"
+          ports:
+            - containerPort: 1433
+          env:
+           - name: MSSQL_PID
+             value: "Enterprise"
+           - name: ACCEPT_EULA
+             value: "Y"
+           - name: MSSQL_SA_PASSWORD
+             value: "SQLserver2019"
+           - name: MSSQL_MEMORY_LIMIT_MB
+             value: "2048"
+#Attention: command pas toujours accepte par image (idem que CMD dans Dockerfile)
+#          command: ["/bin/echo"]
+#          args: ["export PATH=$PATH:/opt/mssql-tools/bin\nsqlcmd -S localhost -U sa -P SQLserver2019 -i /tmp/queries.sql > /tmp/run.sh"]
+#          command: ["/bin/echo"]
+#	 args: ["select @@version;\ngo\nSELECT CONVERT(char(40), SERVERPROPERTY('servername')) ServerName;\ngo\nselect total_physical_memory_kb/1024 as total_physical_memory_MB,available_physical_memory_kb/1024 as available_physical_memory_MB from sys.dm_os_sys_memory;\ngo",">","/tmp/queries.sql"]
+#sparator pour objet. NOTE pas supporté dans console
