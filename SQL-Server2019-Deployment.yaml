@@ -26,6 +26,7 @@ spec:
           image: "mcr.microsoft.com/mssql/server:2019-latest"
           ports:
             - containerPort: 1433
+#Attention: POD reste pending si pbl resource
           resources:
             limits:
               memory: 3Gi
