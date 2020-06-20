@@ -29,10 +29,10 @@ spec:
           resources:
             limits:
               memory: 3Gi
-              cpu: "4"
+              cpu: "2"
             requests:
               memory: 2Gi
-              cpu: "2"
+              cpu: "1"
           env:
           - name: MSSQL_PID
             value: "Developer"
