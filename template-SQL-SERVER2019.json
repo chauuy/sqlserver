@@ -98,13 +98,7 @@
                    {"name": "SA_PASSWORD", "value": "${SA_PASSWORD}"},
                    {"name": "ACCEPT_EULA", "value": "Y"},
                    {"name": "MSSQL_MEMORY_LIMIT_MB", "value": "${MSSQL_MEMORY_LIMIT_MB}"}
-                ],
-                "terminationMessagePath": "/dev/termination-log",
-                "imagePullPolicy": "IfNotPresent",
-                "securityContext": {
-                  "capabilities": {},
-                  "privileged": false
-                }
+                ]
               }
             ],
             "restartPolicy": "Always",
