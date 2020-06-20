@@ -57,8 +57,8 @@
       }
     },
     {
-      "kind": "DeploymentConfig",
-      "apiVersion": "apps.openshift.io/v1",
+      "kind": "Deployment",
+      "apiVersion": "apps/v1",
       "metadata": {
         "name": "mssql-2019-DC",
       "labels": {
@@ -190,6 +190,6 @@
     }
   ],
   "labels": {
-    "template": "sqlserver-template-stibuild"
+    "template": "sqlserver2019-template"
   }
 }
