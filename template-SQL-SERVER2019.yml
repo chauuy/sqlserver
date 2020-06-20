@@ -41,7 +41,6 @@ objects:
   apiVersion: apps/v1
   metadata:
     name: mssql-2019
-    namespace: ocp-demo
     labels:
       app: mssql-2019
       app.kubernetes.io/name: mssql
