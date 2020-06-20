@@ -61,6 +61,10 @@
       "apiVersion": "apps.openshift.io/v1",
       "metadata": {
         "name": "mssql-2019-DC",
+      "labels": {
+         "app": "mssql-2019",
+         "app.kubernetes.io/name": "mssql"
+       },
         "annotations": { "template.openshift.io/wait-for-ready": "true"}
       },
       "spec": {
