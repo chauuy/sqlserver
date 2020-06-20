@@ -105,6 +105,7 @@
             "dnsPolicy": "ClusterFirst"
           }
         }
+      }
     },
     {
       "kind": "Service",
