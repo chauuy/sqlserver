@@ -94,10 +94,10 @@
                   }
                 ],
                 "env": [
-                   {"name": "MSSQL_PID", "value": "Developer"},
-                   {"name": "SA_PASSWORD", "value": "SQLserver2019"},
+                   {"name": "MSSQL_PID", "value": "${MSSQL_PID}"},
+                   {"name": "SA_PASSWORD", "value": "${SA_PASSWORD}"},
                    {"name": "ACCEPT_EULA", "value": "Y"},
-                   {"name": "MSSQL_MEMORY_LIMIT_MB", "value": "2Gi"}
+                   {"name": "MSSQL_MEMORY_LIMIT_MB", "value": "${MSSQL_MEMORY_LIMIT_MB}"}
                 ],
                 "terminationMessagePath": "/dev/termination-log",
                 "imagePullPolicy": "IfNotPresent",
@@ -142,7 +142,7 @@
         "name": "mssql-2019"
       },
       "spec": {
-        "dockerImageRepository": "openshift/mssql-2019"
+        "dockerImageRepository": "openshift/mssql-2019:latest"
       }
     }
   ],
@@ -160,12 +160,6 @@
       "value": "Developer"
     },
     {
-      "name": "MEMORY_LIMIT",
-      "displayName": "MEMORY_LIMIT (Memory Limit for Container)",
-      "description": "Maximum amount of memory the container can use.",
-      "value": "3Gi"
-    },
-    {
       "name": "MSSQL_MEMORY_LIMIT_MB",
       "displayName": "MSSQL_MEMORY_LIMIT_MB (Memory Limit for SQL Server 2GB min)",
       "description": "Maximum amount of memory the database can use.",
@@ -175,8 +169,7 @@
       "name": "SA_PASSWORD",
       "displayName": "SA_PASSWORD (Database Administrator Username)",
       "description": "Password for the database administrator.",
-      "generate": "expression",
-      "from": "[a-zA-Z0-9]{8}"
+      "value": "SQLserver2019"
     }
   ],
   "labels": {
