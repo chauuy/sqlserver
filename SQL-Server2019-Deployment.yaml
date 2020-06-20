@@ -13,7 +13,7 @@ spec:
   selector:
     matchLabels:
       app: mssql2019-sample
-  replicas: 2
+  replicas: 1
   strategy:
     type: Recreate
   template:
