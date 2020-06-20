@@ -60,7 +60,7 @@
       "kind": "Deployment",
       "apiVersion": "apps/v1",
       "metadata": {
-        "name": "mssql-2019-DC",
+        "name": "mssql-2019",
       "labels": {
          "app": "mssql-2019",
          "app.kubernetes.io/name": "mssql"
@@ -74,12 +74,12 @@
         "triggers": [],
         "replicas": 1,
         "selector": {
-          "name":"mssql-2019"
+          "matchLabels": { "app": "mssql-2019" }
         },
         "template": {
           "metadata": {
             "labels": {
-              "name": "mssql-2019"
+              "app": "mssql-2019"
             }
           },
           "spec": {
