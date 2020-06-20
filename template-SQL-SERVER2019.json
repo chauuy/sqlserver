@@ -5,11 +5,11 @@
     "name": "microsoft-sql-server-2019",
     "annotations":
      {
-      "display-name": "Microsoft SQL Server (Ephemeral)",
+      "openshift.io/display-name": "Microsoft SQL Server (Ephemeral)",
+      "openshift.io/provider-display-name": "Microsoft Inc.",
+      "openshift.io/support-url": "https://access.redhat.com",
       "description": "Microsoft SQL Server database service, without persistent storage.",
       "iconClass": "icon-mssql",
-      "provider-display-name": "Microsoft Inc.",
-      "support-url": "https://access.redhat.com",
       "tags": "database,mssql"
      }
   },
