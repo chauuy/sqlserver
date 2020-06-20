@@ -6,7 +6,7 @@ metadata:
 #--Ajouter une App OpenShift (part-of) + iconDonet (name) et pas seulement un Deployment
   labels:
     app: mssql2019-sample
-    app.kubernetes.io/name: dotnet
+    app.kubernetes.io/name: mssql
     app.kubernetes.io/part-of: myaspnet1
 #--
 spec:
