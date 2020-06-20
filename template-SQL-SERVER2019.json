@@ -69,12 +69,7 @@
       },
       "spec": {
         "strategy": {
-          "type":
-             {
-              "kind": "DockerImage",
-              "name": "mcr.microsoft.com/mssql/server:2019-latest"
-             }
-          }
+          "type": "Recreate"
         },
         "triggers": [],
         "replicas": 1,
@@ -90,7 +85,7 @@
           "spec": {
             "containers": [
               {
-                "name": "mssql-2019",
+                "name": "sqlserver2019",
                 "image": "mcr.microsoft.com/mssql/server:2019-latest",
                 "ports": [
                   {
@@ -98,11 +93,6 @@
                     "protocol": "TCP"
                   }
                 ],
-                "resources": {
-                  "limits": {
-                    "memory": "${MEMORY_LIMIT}"
-                  }
-                },
                 "env": [
                    {"name": "MSSQL_PID", "value": "Developer"},
                    {"name": "SA_PASSWORD", "value": "SQLserver2019"},
