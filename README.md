@@ -1,6 +1,6 @@
 # sqlserver
 
-This folder contains
+This folder contains:
 1 - A Kubernetes Deployment file for SQL Server 
 
 2 - A Dokerfile to deploy SQL Server
