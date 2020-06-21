@@ -1,6 +1,11 @@
 # sqlserver
 
-Template SQL-Server 2019 :
+This folder contains
+1 - A Kubernetes Deployment file for SQL Server 
+
+2 - A Dokerfile to deploy SQL Server
+
+3 - A Template SQL-Server 2019 :
 
 Add a new Template to deploy SQL Server 2019 in OpenShift "From Catalog".
 
