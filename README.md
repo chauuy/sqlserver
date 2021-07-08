@@ -1,4 +1,4 @@
-# sqlserver
+# sqlserver on Openshift
 
 This folder contains:
 
