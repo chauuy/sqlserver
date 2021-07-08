@@ -8,7 +8,7 @@ This folder contains:
 2 - A Dokerfile to deploy SQL Server
 - Dockerfile
 
-3 - A Template SQL-Server 2019 :
+3 - A K8S Template SQL-Server 2019 :
 
 Add a new Template to deploy SQL Server 2019 in OpenShift "From Catalog".
 
