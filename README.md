@@ -12,9 +12,12 @@ This folder contains:
 
 Add a new Template to deploy SQL Server 2019 in OpenShift "From Catalog".
 
+```shell
 eval $(crc oc-env)
 oc login -u kubeadmin -p XXXXX https://api.crc.testing:6443
 oc apply -f  template-SQL-SERVER2019.yml
+```
+
 
 Available in JSON and YAML
 - template-SQL-SERVER2019.yml (In YAML format)
