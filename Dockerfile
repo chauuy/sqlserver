@@ -12,6 +12,7 @@ ENV MSSQL_DUMP_DIR=/tmp
 #CMD export PATH=$PATH:/opt/mssql/bin:/opt/mssql-tools/bin
 COPY run.sh /tmp/run.sh
 COPY queries.sql /tmp/queries.sql
+CMD chmod +x /tmp/run.sh
 
 EXPOSE 1433
 #ajout label app.kubernetes.io/name: mssql
