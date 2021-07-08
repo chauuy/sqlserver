@@ -3,8 +3,10 @@
 This folder contains:
 
 1 - A Kubernetes Deployment file for SQL Server 
+- SQL-Server2019-Deployment.yaml
 
 2 - A Dokerfile to deploy SQL Server
+- Dockerfile
 
 3 - A Template SQL-Server 2019 :
 
