@@ -15,4 +15,4 @@ COPY queries.sql /tmp/queries.sql
 
 EXPOSE 1433
 #ajout label app.kubernetes.io/name: mssql
-#ENTRYPOINT ["/opt/mssql/bin/sqlservr"]
+CMD ["/opt/mssql/bin/sqlservr"]
