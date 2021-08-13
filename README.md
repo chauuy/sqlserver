@@ -5,6 +5,8 @@ This folder contains:
 1 - A Kubernetes Deployment file for SQL Server 
 - SQL-Server2019-Deployment.yaml
 ```shell
+eval $(crc oc-env)
+oc login -u kubeadmin -p XXXXX https://api.crc.testing:6443
 oc -apply SQL-Server2019-Deployment.yaml
 ```
 
