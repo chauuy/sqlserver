@@ -16,7 +16,7 @@ kubectl -apply SQL-Server2019-Deployment.yaml
 
 3 - A Openshift Template SQL-Server 2019 ephemeral (without persistent storage)
 
-Add a new Template to deploy SQL Server 2019 in "From Catalog" menu.
+Add a new Template to deploy SQL Server 2019 in "From Catalog" menu in Openshift GUI.
 
 ```shell
 eval $(crc oc-env)
