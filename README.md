@@ -17,8 +17,8 @@ eval $(crc oc-env)
 oc login -u kubeadmin -p XXXXX https://api.crc.testing:6443
 oc new-build --strategy docker --binary --docker-image mcr.microsoft.com/mssql/server:2019-latest --name sqlserver2019
 oc start-build sqlserver2019 --from-file Dockerfile --follow
-oc new-app -i sqlserver2019
-oc expose svc/sqlserver2019
+oc new-app -i sqlserver2019 --name 'mysqlsrv2019' --allow-missing-imagestream-tags
+oc expose svc/mysqlsrv2019
 ```
 
 3 - A Openshift Template SQL-Server 2019 ephemeral (without persistent storage)
