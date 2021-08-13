@@ -16,7 +16,7 @@ oc -apply SQL-Server2019-Deployment.yaml
 eval $(crc oc-env)
 oc login -u developer -p developer https://api.crc.testing:6443
 oc new-app https://github.com/chauuy/sqlserver.git --strategy=docker 
-oc expose svc/mysqlsrv2019
+oc expose svc/sqlserver
 ```
 
 3 - A Openshift Template SQL-Server 2019 ephemeral (without persistent storage)
