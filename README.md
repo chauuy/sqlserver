@@ -1,4 +1,4 @@
-# sqlserver on Openshift
+# SQL-Server Linux container on Openshift
 
 This folder contains:
 
