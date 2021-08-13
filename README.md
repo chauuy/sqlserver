@@ -24,7 +24,7 @@ oc login -u kubeadmin -p XXXXX https://api.crc.testing:6443
 oc apply -f  template-SQL-SERVER2019.yml
 ```
 
-**Note:** it is possible to modify this template to add persistent storage with a PV (PersistentVolume).
+**Note:** it is possible to modify this template to add persistent storage with a config of a PVC (PersistentVolumeClaim) in a PV (PersistentVolume).
 
 Available in JSON and YAML
 - template-SQL-SERVER2019.yml (In YAML format)
