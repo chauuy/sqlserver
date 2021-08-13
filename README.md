@@ -29,3 +29,9 @@ oc apply -f  template-SQL-SERVER2019.yml
 Available in JSON and YAML
 - template-SQL-SERVER2019.yml (In YAML format)
 - template-SQL-SERVER2019.json (In JSON format)
+
+----
+
+Useful Link to MSSQL Tools:
+
+https://docs.microsoft.com/en-us/sql/tools/overview-sql-tools?view=sql-server-ver15
