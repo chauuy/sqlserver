@@ -6,7 +6,7 @@ This folder contains:
 - SQL-Server2019-Deployment.yaml
 ```shell
 eval $(crc oc-env)
-oc login -u kubeadmin -p XXXXX https://api.crc.testing:6443
+oc login -u developer -p developer https://api.crc.testing:6443
 oc -apply SQL-Server2019-Deployment.yaml
 ```
 
@@ -14,7 +14,7 @@ oc -apply SQL-Server2019-Deployment.yaml
 - Dockerfile
 ```shell
 eval $(crc oc-env)
-oc login -u kubeadmin -p XXXXX https://api.crc.testing:6443
+oc login -u developer -p developer https://api.crc.testing:6443
 oc new-build --strategy docker --binary --docker-image mcr.microsoft.com/mssql/server:2019-latest --name sqlserver2019
 oc start-build sqlserver2019 --from-file Dockerfile --follow
 oc new-app -i sqlserver2019 --name 'mysqlsrv2019' --allow-missing-imagestream-tags
