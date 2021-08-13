@@ -15,7 +15,8 @@ oc -apply SQL-Server2019-Deployment.yaml
 ```shell
 eval $(crc oc-env)
 oc login -u developer -p developer https://api.crc.testing:6443
-oc new-app https://github.com/chauuy/sqlserver.git --strategy=docker 
+oc new-app https://github.com/chauuy/sqlserver.git --strategy=docker
+oc logs -f buildconfig/sqlserver
 oc expose svc/sqlserver
 ```
 
