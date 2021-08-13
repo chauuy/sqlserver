@@ -22,7 +22,7 @@ oc expose svc/sqlserver
 
 3 - A Openshift Template SQL-Server 2019 ephemeral (without persistent storage)
 
-Add a new Template to deploy SQL Server 2019 in "From Catalog" menu in Openshift GUI.
+Add a new Template to deploy SQL Server 2019 in "From Catalog" menu in Openshift Developer's GUI.
 
 ```shell
 eval $(crc oc-env)
