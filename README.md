@@ -5,13 +5,13 @@ This folder contains:
 1 - A Kubernetes Deployment file for SQL Server 
 - SQL-Server2019-Deployment.yaml
 ```shell
-kubectl -apply SQL-Server2019-Deployment.yaml
+oc -apply SQL-Server2019-Deployment.yaml
 ```
 
 2 - A Dokerfile to deploy SQL Server
 - Dockerfile
 ```shell
-kubectl -apply SQL-Server2019-Deployment.yaml
+oc -apply SQL-Server2019-Deployment.yaml
 ```
 
 3 - A Openshift Template SQL-Server 2019 ephemeral (without persistent storage)
