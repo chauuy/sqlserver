@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mssql2019-sample
   namespace: test
-#--Ajouter une App OpenShift (part-of) + iconDonet (name) et pas seulement un Deployment
+#--Add an OpenShift Application (part-of) not only a single POD.
   labels:
     app: mssql2019-sample
     app.kubernetes.io/name: mssql
@@ -26,7 +26,7 @@ spec:
           image: "mcr.microsoft.com/mssql/server:2019-latest"
           ports:
             - containerPort: 1433
-#Attention: POD can stay in pending state if not enought resources are available
+#Attention: POD can stay in pending state if not enought resources are available.
           resources:
             limits:
               memory: 3Gi
@@ -43,6 +43,6 @@ spec:
             value: "Y"
           - name: MSSQL_MEMORY_LIMIT_MB
             value: "2Gi"
-#Attention: command tag can be limited depending on the image (like CMD tag in a Dockerfile)
+#Attention: command tag can be limited depending on the image (like CMD tag in a Dockerfile).
           command: ["bin/sh"]
           args: ["ls"]
