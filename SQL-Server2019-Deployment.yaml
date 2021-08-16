@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mssql2019-sample
   namespace: test
-#--Add an OpenShift Application (part-of) not only a single POD.
+#--Add an OpenShift Application (part-of) not a single POD.
   labels:
     app: mssql2019-sample
     app.kubernetes.io/name: mssql
