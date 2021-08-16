@@ -4,7 +4,8 @@ metadata:
   name: mssql2019-sample
 #--test is the OpenShift project name used for the deployment.
   namespace: test
-#--Add an OpenShift Application (part-of) not a single POD.
+#--Add an OpenShift Application called "my-app" not a single POD. 
+#--A aother POD Frontend using dotnet, for example, could be added to the application.
   labels:
     app: mssql2019-sample
     app.kubernetes.io/name: mssql
