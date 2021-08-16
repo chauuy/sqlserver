@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mssql2019-sample
+#--test is the OpenShift project name used for the deployment.
   namespace: test
 #--Add an OpenShift Application (part-of) not a single POD.
   labels:
