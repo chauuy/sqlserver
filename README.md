@@ -3,7 +3,7 @@
 This folder contains:
 
 1 - A Kubernetes Deployment file for SQL Server 
-- SQL-Server2019-Deployment.yaml
+- SQLSRVDeployment.yaml
 ```shell
 eval $(crc oc-env)
 oc login -u developer -p developer https://api.crc.testing:6443
