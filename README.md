@@ -8,7 +8,7 @@ This folder contains:
 eval $(crc oc-env)
 oc login -u developer -p developer https://api.crc.testing:6443
 oc new-project test
-oc -apply SQL-Server2019-Deployment.yaml
+oc -apply SQLSRVDeployment.yaml
 ```
 
 2 - A Dokerfile to deploy SQL Server
